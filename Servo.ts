@@ -123,4 +123,8 @@ namespace Servo {
         let value = pulse * 4096 / 20000;
         setPwm(channel, 0, value);
     }
+
+    export function stopServo(channel: number): void {
+    	setPwm(channel, 0, 0);
+    }
 } 
